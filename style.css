@@ -1,0 +1,629 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=IM+Fell+Great+Primer+SC&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Parkinsans:wght@300..800&display=swap');
+
+body {
+    padding: 0%;
+    margin:0%;
+    box-sizing: border-box;
+}
+
+
+
+.header {  
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 16px; /* 1rem = 16px */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    gap: 32px; 
+    font-size: 19.2px;
+}
+
+
+.nav-menu a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    color: black;
+    position: relative;
+    
+}
+
+.nav-menu a:hover::after {
+    width: 100%; /* A linha ocupa toda a largura do texto */
+}
+
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    margin-top: 160px; /* 10rem = 160px */
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* 5rem = 80px */
+}
+
+
+.menu-lateral li {
+    margin-top: 48px; /* 3rem = 48px */
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    font-size: 19.2px; /* 1.2rem = 19.2px */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Mais fino */
+    color: black;
+    font-style: normal;
+    position: relative;
+}
+
+.menu-lateral a::after, .nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* -0.5rem = -8px */
+    left: 0;
+    width: 0px; /* 0vh = 0px */
+    height: 4px; /* 0.8vh ≈ 8.64px (em uma tela de 1080px de altura) */
+    background-color: #87CEFA;
+    transition: 0.3s ease;
+}
+
+.menu-lateral a:hover::after {
+    width: 100%; /* A linha ocupa toda a largura do texto */
+}
+
+
+
+.imagem {
+    position: absolute;
+    width: 100%; /* Mantém 100% do contêiner */
+    z-index: -1; 
+    opacity: 0.5;
+    height: auto; /* Altura automática */
+}
+
+#table {
+    background-color: #c7f4f4;
+    width: 500px; /* Largura fixa da tabela */
+    position: relative;
+    z-index: 1;
+    border-collapse: collapse;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    
+    /* Centralizando a tabela */
+    display: block; /* Necessário para aplicar margin auto */
+    margin: 115px 300px 200px 400px; 
+}
+
+td, tr {
+    border: 8px solid #fafdff; /* 0.5rem = 8px */
+    padding: 9.6px; /* 0.5vw = 9.6px */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.titulo-table {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700; 
+    font-size: 20.8px; /* 1.3rem = 20.8px */
+    margin-top: -75.6px; /* -7vh = -75.6px */
+    color: #000000;
+    background-color: #87CEEB;
+}
+
+.container-quemsomos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px; /* 4rem = 64px */
+    background-color: #E0FFFF;
+    height: 176px; /* 11rem = 176px */
+    width: 1120px; /* 70rem = 1120px */
+}
+
+.texto2 {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    max-width: 560px; /* 35rem = 560px */
+    gap: 6.4px; /* 0.4rem = 6.4px */
+    font-size: 16px; /* 1rem = 16px */
+}
+
+.palavra1 {
+    color: rgb(4, 19, 117);
+}
+
+.img3 {
+    width: 100%; /* Faz a imagem se ajustar ao tamanho da div */
+    height: 100%; /* Mantém a proporção da imagem */
+    margin-bottom: 48px; /* 3rem = 48px */
+}
+
+.quemsomos {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36.8px; /* 2.3rem = 36.8px */
+    margin-top: -32px; /* -2rem = -32px */
+}
+
+/* Estilo para os cards */
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 64px; /* 4rem = 64px */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px; /* 20rem = 320px */
+    background-color: #ffffff;
+    border-radius: 8px; /* 0.5rem = 8px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding: 16px; /* 1rem = 16px */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: 240px; /* 15rem = 240px */
+    object-fit: cover;
+    border-radius: 8px; /* 0.5rem = 8px */
+}
+
+.card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; 
+    color: #354758; 
+    font-style: normal;
+    text-transform: uppercase; /* Torna o título mais imponente */
+    margin-top: 32px; /* 2rem = 32px */
+}
+
+.textao-secao2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px; /* 2rem = 32px */
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 22.4px; /* 1.4rem = 22.4px */
+}
+
+.textao-secao2 h2 {
+    margin-bottom: 112px; /* 7rem = 112px */
+}
+
+.container-profissionais {
+    display: flex;
+    justify-content: space-around; /* Espalha os cards com espaçamento */
+    align-items: center;
+    margin-bottom: 64px; /* 4rem = 64px */
+    width: 100%;
+}
+
+.imagem-profissional1,
+.imagem-profissional2,
+.imagem-profissional3 {
+    width: 288px; /* 18rem = 288px */
+    height: 288px; /* 18rem = 288px */
+    border-radius: 50%;
+    margin-top: -48px; /* -3rem = -48px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra à imagem */
+    border: solid 3.2px rgb(255, 255, 255); /* 0.2rem = 3.2px */
+}
+
+.nome-profissional1,
+.nome-profissional2,
+.nome-profissional3 {
+    text-align: center;  
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px; /* 1.5rem = 24px */
+    color: #000000;
+}
+
+.icones-imagem {
+    display: flex;
+    justify-content: center;
+}
+
+.icones-imagem img {
+    height: 48px; /* 3rem = 48px */
+}
+
+.icones-imagem img:hover {
+    transform: scale(1.05);
+    transition: ease 0.5s; /* Ajustado tempo para "s" */
+}
+
+.fundo-especialidades {
+    display: flex;
+    width: 100%;
+    height: 608px; /* 38rem = 608px */
+    background-color: #cef5fdd2;
+}
+
+.card-especialidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px; /* 0.5rem = 8px */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 192px; /* 12rem = 192px */
+    height: 160px; /* 10rem = 160px */
+}
+
+h2.texto-especialidades {
+    padding: 16px; /* 1rem = 16px */
+    margin-left: 16px; /* 1rem = 16px */
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 28.8px; /* 1.8rem = 28.8px */
+    color: #000000;
+}
+
+.card-especialidade:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: 208px; /* 13rem = 208px */
+    margin-top: 128px; /* 8rem = 128px */
+    gap: 32px; /* 2rem = 32px */
+    margin-bottom: 192px; /* 12rem = 192px */
+}
+
+img.imagem-especialidades1 {
+    margin-top: 16px; /* 1rem = 16px */
+}
+
+.botao-saibamais {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px; /* 1rem = 16px */
+}
+
+.botao {
+    color: rgb(255, 255, 255);
+    background-color: #9cbdff;
+    font-size: 22.4px; /* 1.4rem = 22.4px */
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    width: 288px; /* 18rem = 288px */
+    border: solid 3.2px rgb(255, 255, 255); /* 0.2rem = 3.2px */
+    font-style: normal;
+    border-radius: 5%;
+}
+
+
+.botao:hover {
+    background-color: #363674b6;
+}
+
+.imagem-secao3 {
+    display: flex;
+    justify-content: center;
+}
+
+h2.secao3-texto {
+    color: #ff2d2d;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 80px; /* 5rem -> 80px */
+    animation: smooth-blink 1.2s infinite ease;
+}
+
+.convenios-container {
+    border: solid 3.2px rgb(166, 0, 0); /* 0.2rem -> 3.2px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px; /* 40rem -> 640px */
+    width: 800px; /* 50rem -> 800px */
+    margin: 48px auto; /* 3rem -> 48px, centraliza horizontalmente */
+}
+
+.convenios-imagem {
+    height: auto;
+    width: 640px; /* 40rem -> 640px */
+}
+
+
+.fundo-secao4 {
+    background-color: #dcd6d661;
+    height: auto;
+}
+
+.texto-secao4 {
+    display: flex;
+    justify-content: center;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    color: #033c5f; 
+    font-size: 24px; /* 1.5rem -> 24px */
+}
+
+.texto-titulo-formulario {
+    color: rgb(0, 0, 255);
+}
+
+.texto2-secao4-mapa {
+    text-align: center;
+    color: rgb(0, 69, 130);
+    font-family: "Noto serif";
+    font-weight: 800;
+    font-size: 22.4px; /* 1.4rem -> 22.4px */
+}
+
+.texto2-secao4 {
+    display: flex;
+    justify-content: center;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 19.2px; /* 1.2rem -> 19.2px */
+}
+
+div.localizacao {
+    margin-top: -64px; /* -4rem -> -64px */
+}
+
+.container-formulario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 64px; /* 4rem -> 64px */
+}
+
+.formulario-estilizaçao {
+    display: flex;
+    flex-direction: column;
+    font-family: "PT Serif", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.botao-formulario {
+    width: 128px; /* 8rem -> 128px */
+    color: rgb(0, 0, 0);
+    background-color: #98c8e7e7;
+    font-size: 16px; /* 1.0rem -> 16px */
+    font-family: "Questrial", serif;
+    font-weight: 600;
+    font-style: normal;
+    border-radius: 5%;
+    margin-top: 32px; /* 2rem -> 32px */
+}
+
+.botao-formulario:hover {
+    background-color: #ffffff;
+}
+
+input {
+    border-radius: 4.8px; /* 0.3rem -> 4.8px */
+}
+
+textarea {
+    resize: horizontal;
+    width: 480px; /* 30rem -> 480px */
+}
+
+.duvidas-frequentes-titulo {
+    text-align: center;
+    margin-top: 69px;
+    font-family: "Noto-serif";
+    font-weight: 700;
+    font-style: bold; 
+    font-size: 30px;
+}
+
+/* Conteúdo do Accordion */
+.conteudo-accordion {
+    color: #000;
+    font-size: 14px;
+    opacity: 0;
+    height: 0;
+    font-family: "Noto-serif";
+    font-weight: 600;
+    margin: 20px;
+    padding: 5px 0px;
+    overflow: hidden;
+    transition: opacity .3s;
+}
+
+/* Ativo - quando a classe active é adicionada */
+.conteudo-accordion.active {
+    opacity: 1;
+    height: 100%;
+}
+
+/* Estilos para a seta */
+.accordion:has(.active) .arrow {
+    transform: rotate(180deg); /* Rotaciona a seta */
+}
+
+/* Ajuste nos ícones da seta */
+.arrow {
+    transition: transform .2s linear;
+}
+
+
+.accordion-header {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+}
+
+.accordion-header span{
+    max-width:100%;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Noto-serif";
+    font-weight: 600;
+    font-size: 17px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 60px;
+}
+
+.accordion {
+    background-color: #87CEFA;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 500px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.botao:hover {
+    background-color: #363674b6;
+}
+
+.imagem-secao3 {
+    display: flex;
+    justify-content: center;
+}
+
+h2.secao3-texto {
+    color: #ff2d2d;
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 80px; /* 5rem -> 80px */
+    animation: smooth-blink 1.2s infinite ease;
+}
+
+.convenios-container {
+    border: solid 3.2px rgb(166, 0, 0); /* 0.2rem -> 3.2px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 640px; /* 40rem -> 640px */
+    width: 800px; /* 50rem -> 800px */
+    margin: 48px auto; /* 3rem -> 48px */
+}
+
+.convenios-imagem {
+    height: auto;
+    width: 640px; /* 40rem -> 640px */
+}
+
+.fundo-footer {
+    background: linear-gradient(135deg, #a1d4e8, #6ab0c8); /* Degrade suave */
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    gap: 40px; 
+    margin-top: 30px;
+}
+
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.imagem-footer {
+    width: 220px;
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+/* 📝 Título */
+.titulo-footer {
+    font-family: "Noto-serif";
+    font-size: 27px;
+    color: #ffffff; 
+    font-weight: 700;
+}
+
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    flex-wrap: wrap; 
+}
+
+.icone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff; 
+    transition: transform 0.3s ease;
+}
+
+.icone img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.208); 
+    transition: transform 0.3s ease;
+}
+
+.icone:hover {
+    transform: translateY(-8px);
+}
+
+
+.icone span {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "PT Serif", serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.footer-direitos p {
+    font-size: 14px;
+    opacity: 0.8; /* Texto mais sutil */
+}
+
